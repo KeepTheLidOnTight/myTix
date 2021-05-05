@@ -10,7 +10,7 @@ public class ticketInfo {
     private Integer id;
 
     @Version
-    private Integer version;
+    private Integer VERSION;
 
     private String date;
     private Double price;
