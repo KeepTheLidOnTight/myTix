@@ -3,7 +3,7 @@ package com.app.mytix.domain;
 import javax.persistence.*;
 
 @Entity
-public class ticketInfo {
+public class TicketInfo {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
@@ -15,10 +15,11 @@ public class ticketInfo {
     private String date;
     private Double price;
 
-    // Create EventId Here
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Event eventId;
 
     //region CONSTRUCTORS
-    public ticketInfo() {}
+    public TicketInfo() {}
     //endregion
 
     //region GETTERS / SETTERS
